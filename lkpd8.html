@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD Praktikum Sifat Koligatif Larutan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #2E8B57;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            background-color: #2E8B57;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .answer-box {
+            background-color: #FFF9C4; /* Light yellow background */
+            border: 1px solid #E0E0E0;
+            padding: 15px;
+            min-height: 100px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .answer-box-large {
+            min-height: 150px;
+        }
+        .answer-box-calculation {
+            background-color: #DCEDC8; /* Light green background */
+            border: 1px solid #E0E0E0;
+            padding: 15px;
+            min-height: 120px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .nama-kelompok {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .alat-bahan {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .green-chemistry {
+            background-color: #DCEDC8;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #2E8B57;
+            color: white;
+        }
+        .step {
+            background-color: #E8F5E9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .step-number {
+            background-color: #2E8B57;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LKPD PRAKTIKUM SIFAT KOLIGATIF LARUTAN</h1>
+        <p>Kurikulum Merdeka Berbasis Green Chemistry</p>
+    </div>
+
+    <div class="section">
+        <h2>IDENTITAS KELOMPOK</h2>
+        <div class="nama-kelompok">
+            <div>
+                <p>1. ..................................................................</p>
+                <p>2. ..................................................................</p>
+                <p>3. ..................................................................</p>
+            </div>
+            <div>
+                <p>4. ..................................................................</p>
+                <p>5. ..................................................................</p>
+                <p>6. ..................................................................</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TUJUAN PEMBELAJARAN</h2>
+        <div class="answer-box">
+            1. Mengamati dan menjelaskan fenomena penurunan tekanan uap larutan<br>
+            2. Mengamati dan menjelaskan fenomena tekanan osmotik<br>
+            3. Mengamati dan menjelaskan fenomena kenaikan titik didih larutan<br>
+            4. Mengamati dan menjelaskan fenomena penurunan titik beku larutan<br>
+            5. Menghitung besaran sifat koligatif larutan secara kuantitatif
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>INTEGRASI GREEN CHEMISTRY</h2>
+        <div class="green-chemistry">
+            <p><b>Prinsip Green Chemistry yang diterapkan dalam praktikum ini:</b></p>
+            <ol>
+                <li><b>Pencegahan limbah:</b> Praktikum dirancang untuk menghasilkan limbah minimal</li>
+                <li><b>Ekonomi atom:</b> Menggunakan bahan dalam jumlah sesuai kebutuhan</li>
+                <li><b>Penggunaan pelarut yang aman:</b> Menggunakan air sebagai pelarut utama</li>
+                <li><b>Efisiensi energi:</b> Praktikum dirancang dengan efisiensi penggunaan energi</li>
+                <li><b>Penggunaan bahan baku terbarukan:</b> Menggunakan bahan alami seperti tomat</li>
+                <li><b>Pengurangan derivatisasi:</b> Meminimalkan tahapan reaksi</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>TEORI DASAR</h2>
+        <div class="answer-box-large">
+            Sifat koligatif larutan adalah sifat larutan yang bergantung pada jumlah partikel zat terlarut dalam larutan, bukan pada jenis zat terlarutnya. Ada empat sifat koligatif larutan:
+            <br><br>
+            1. <b>Penurunan Tekanan Uap (ΔP)</b>: Tekanan uap larutan lebih rendah daripada tekanan uap pelarut murni. Dirumuskan dengan hukum Raoult: P = X₁ × P₀, dimana P adalah tekanan uap larutan, X₁ adalah fraksi mol pelarut, dan P₀ adalah tekanan uap pelarut murni.
+            <br><br>
+            2. <b>Tekanan Osmotik (π)</b>: Tekanan yang terjadi akibat perpindahan pelarut dari larutan encer ke larutan pekat melalui membran semipermeable. Dirumuskan dengan π = MRT, dimana M adalah molaritas larutan, R adalah konstanta gas universal, dan T adalah suhu absolut.
+            <br><br>
+            3. <b>Kenaikan Titik Didih (ΔTb)</b>: Larutan memiliki titik didih lebih tinggi daripada pelarut murni. Dirumuskan dengan ΔTb = Kb × m, dimana Kb adalah konstanta kenaikan titik didih molal dan m adalah molalitas larutan.
+            <br><br>
+            4. <b>Penurunan Titik Beku (ΔTf)</b>: Larutan memiliki titik beku lebih rendah daripada pelarut murni. Dirumuskan dengan ΔTf = Kf × m, dimana Kf adalah konstanta penurunan titik beku molal dan m adalah molalitas larutan.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ALAT DAN BAHAN</h2>
+        <div class="alat-bahan">
+            <div>
+                <h3>Alat:</h3>
+                <ol>
+                    <li>Beaker glass 100 mL</li>
+                    <li>Termometer</li>
+                    <li>Kawat kasa</li>
+                    <li>Kaki tiga</li>
+                    <li>Pembakar spirtus</li>
+                    <li>Plastik penutup</li>
+                    <li>Neraca digital</li>
+                    <li>Spatula</li>
+                    <li>Korek api</li>
+                    <li>Kaleng</li>
+                    <li>Baskom</li>
+                </ol>
+            </div>
+            <div>
+                <h3>Bahan:</h3>
+                <ol>
+                    <li>Garam dapur halus</li>
+                    <li>Garam grasak</li>
+                    <li>Tomat</li>
+                    <li>Es batu</li>
+                    <li>Susu</li>
+                    <li>Air</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CARA KERJA</h2>
+        
+        <h3>Percobaan 1: Penurunan Tekanan Uap</h3>
+        <div class="step"><div class="step-number">1</div> Masukkan 200 mL air ke dalam beaker glass 1</div>
+        <div class="step"><div class="step-number">2</div> Masukkan 200 mL air ke dalam beaker glass 2</div>
+        <div class="step"><div class="step-number">3</div> Masukkan 11,7 gram garam dapur halus ke dalam beaker glass 2, aduk hingga larut</div>
+        <div class="step"><div class="step-number">4</div> Tutup kedua beaker glass dengan plastik sampai rapat</div>
+        <div class="step"><div class="step-number">5</div> Amati perubahan pada kedua beaker glass setelah 45 menit</div>
+
+        <h3>Percobaan 2: Tekanan Osmotik</h3>
+        <div class="step"><div class="step-number">1</div> Masukkan masing-masing 200 mL air ke dalam 2 beaker glass</div>
+        <div class="step"><div class="step-number">2</div> Masukkan 11,7 gram garam dapur ke dalam beaker glass 2, aduk hingga larut</div>
+        <div class="step"><div class="step-number">3</div> Masukkan tomat ke dalam masing-masing beaker glass</div>
+        <div class="step"><div class="step-number">4</div> Amati perubahan yang terjadi setelah 40 menit</div>
+
+        <h3>Percobaan 3: Kenaikan Titik Didih</h3>
+        <div class="step"><div class="step-number">1</div> Masukkan 50 mL air ke dalam beaker glass 1</div>
+        <div class="step"><div class="step-number">2</div> Panaskan air dalam beaker glass 1 hingga mendidih</div>
+        <div class="step"><div class="step-number">3</div> Catat suhu air saat mendidih</div>
+        <div class="step"><div class="step-number">4</div> Masukkan 50 mL air ke dalam beaker glass 2</div>
+        <div class="step"><div class="step-number">5</div> Masukkan 11,3 gram garam dapur ke dalam beaker glass 2, aduk hingga larut</div>
+        <div class="step"><div class="step-number">6</div> Panaskan larutan dalam beaker glass 2 hingga mendidih</div>
+        <div class="step"><div class="step-number">7</div> Catat suhu larutan saat mendidih</div>
+
+        <h3>Percobaan 4: Penurunan Titik Beku</h3>
+        <div class="step"><div class="step-number">1</div> Letakkan kaleng ke dalam baskom</div>
+        <div class="step"><div class="step-number">2</div> Masukkan es batu ke dalam baskom kemudian taburi es batu dengan garam grasak</div>
+        <div class="step"><div class="step-number">3</div> Masukkan susu ke dalam kaleng</div>
+        <div class="step"><div class="step-number">4</div> Tutup kaleng dengan rapat</div>
+        <div class="step"><div class="step-number">5</div> Putar-putar kaleng hingga susu di dalam kaleng berubah menjadi es</div>
+        <div class="step"><div class="step-number">6</div> Catat suhu es yang terbentuk</div>
+    </div>
+
+    <div class="section">
+        <h2>LEMBAR PENGAMATAN</h2>
+        
+        <h3>Percobaan 1: Penurunan Tekanan Uap</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Beaker Glass 1 (Air Murni)</th>
+                <th>Beaker Glass 2 (Larutan Garam)</th>
+            </tr>
+            <tr>
+                <td>Kondisi awal</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kondisi setelah 45 menit</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jumlah tetesan air pada plastik</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h3>Percobaan 2: Tekanan Osmotik</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Beaker Glass 1 (Air Murni)</th>
+                <th>Beaker Glass 2 (Larutan Garam)</th>
+            </tr>
+            <tr>
+                <td>Kondisi tomat awal</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Kondisi tomat setelah 40 menit</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Perubahan bentuk/tekstur</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <h3>Percobaan 3: Kenaikan Titik Didih</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Beaker Glass 1 (Air Murni)</th>
+                <th>Beaker Glass 2 (Larutan Garam)</th>
+            </tr>
+            <tr>
+                <td>Suhu saat mendidih (°C)</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Selisih titik didih (°C)</td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+
+        <h3>Percobaan 4: Penurunan Titik Beku</h3>
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Pengamatan</th>
+            </tr>
+            <tr>
+                <td>Suhu es batu (°C)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Suhu es batu + garam (°C)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Suhu es krim yang terbentuk (°C)</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Waktu yang dibutuhkan untuk membentuk es krim</td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>ANALISA HASIL PENGAMATAN</h2>
+        
+        <h3>Percobaan 1: Penurunan Tekanan Uap</h3>
+        <p>a. Bandingkan hasil pengamatan pada beaker glass 1 dan beaker glass 2, manakah yang menghasilkan lebih banyak uap air?</p>
+        <div class="answer-box"></div>
+        
+        <p>b. Mengapa hal tersebut bisa terjadi?</p>
+        <div class="answer-box"></div>
+        
+        <p>c. Jika tekanan uap air = 23,76 mmHg pada suhu 25°C, hitunglah tekanan uap larutan garam pada beaker glass 2!</p>
+        <div class="answer-box-calculation"></div>
+        
+        <p>d. Berikan kesimpulanmu!</p>
+        <div class="answer-box"></div>
+
+        <h3>Percobaan 2: Tekanan Osmotik</h3>
+        <p>a. Bandingkan kekerasan tomat pada beaker glass 1 dan beaker glass 2!</p>
+        <div class="answer-box"></div>
+        
+        <p>b. Mengapa hal tersebut bisa terjadi?</p>
+        <div class="answer-box"></div>
+        
+        <p>c. Jika suhu ruang = 27°C, hitunglah tekanan osmotik pada beaker glass 2?</p>
+        <div class="answer-box-calculation"></div>
+        
+        <p>d. Berikan kesimpulanmu!</p>
+        <div class="answer-box"></div>
+
+        <h3>Percobaan 3: Kenaikan Titik Didih</h3>
+        <p>a. Bandingkan titik didih air (beaker glass 1) dengan titik didih larutan garam (beaker glass 2), manakah yang mempunyai titik didih lebih tinggi?</p>
+        <div class="answer-box"></div>
+        
+        <p>b. Mengapa hal tersebut bisa terjadi?</p>
+        <div class="answer-box"></div>
+        
+        <p>c. Secara teoritis, jika titik didih air = 90°C dan Kb air = 0,52 hitunglah kenaikan titik didih larutan (beaker glass 2)!</p>
+        <div class="answer-box-calculation"></div>
+        
+        <p>d. Berikan kesimpulanmu!</p>
+        <div class="answer-box"></div>
+
+        <h3>Percobaan 4: Penurunan Titik Beku</h3>
+        <p>a. Apa tujuan penambahan garam grasak pada es batu di ember?</p>
+        <div class="answer-box"></div>
+        
+        <p>b. Bandingkan suhu es batu dan suhu es krim yang dihasilkan, manakah yang mempunyai titik beku lebih rendah?</p>
+        <div class="answer-box"></div>
+        
+        <p>c. Mengapa hal tersebut bisa terjadi?</p>
+        <div class="answer-box"></div>
+        
+        <p>d. Berikan kesimpulanmu!</p>
+        <div class="answer-box"></div>
+    </div>
+
+    <div class="section">
+        <h2>REFLEKSI GREEN CHEMISTRY</h2>
+        <p>Jelaskan bagaimana praktikum ini menerapkan prinsip-prinsip green chemistry!</p>
+        <div class="answer-box-large"></div>
+    </div>
+
+    <div class="section">
+        <h2>KESIMPULAN</h2>
+        <p>Berdasarkan keempat percobaan yang telah dilakukan, buatlah kesimpulan mengenai sifat koligatif larutan!</p>
+        <div class="answer-box-large"></div>
+    </div>
+
+    <div class="section">
+        <h2>DAFTAR PUSTAKA</h2>
+        <div class="answer-box"></div>
+    </div>
+</body>
+</html>
